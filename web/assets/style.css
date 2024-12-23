@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+TC:wght@100;400;900&display=swap');
+a {
+    text-decoration: none;
+}
+
+/* 形象照 */
+.headerD{
+    z-index: 9999;
+}
+.imagD {
+    background-image: url(../images/image_photo/image_01.jpg);
+}
+
+.playing-fluid {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: 9999;
+}
+
+.headerD  p {
+    display: flex;
+    font-size: 32px;
+    font-family: 'Lobster','Noto-Sans-TC';
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+/* color 色票*/
+/* .繭玉とシルクの背景-1-hex {color: #A68256;}
+.繭玉とシルクの背景-2-hex {color: #D9BB96;}
+.繭玉とシルクの背景-3-hex {color: #A69177;}
+.繭玉とシルクの背景-4-hex {color: #BFAE99;}
+.繭玉とシルクの背景-5-hex {color: #F2E6D8;}
+#E1BF9B #FCF5F2 */
+
+/* 輪播*/
+.carouselD{
+    border-radius: 20px;
+}
+.carousel-indicators .carousel-indicatorsD-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    margin: 8px 0;
+}
+
+.carousel-indicators .active {
+    background-color: #575757;
+}
+
+.carousel-indicatorsD {
+    flex-direction: column;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 90%;
+}
+
+.carouselPT {
+    width: 100%;
+    margin: 64px 0;
+}
+
+.carouselPT h1 {
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 導覽列-------------------------- */
+nav {
+    width: 100%;
+    background-color: #BFAE99;
+    z-index: 9999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.logo img{
+    color: #fff;
+}
+.logo,
+.logo:hover,
+.logo:active{
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin: auto;
+}
+
+.menuBTN,
+.menuBTN:hover {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconBAR {
+    display: flex;
+}
+
+.iconBAR a {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.icon1:hover{
+    transition: all 1s;
+    color: #1b74e4;
+    transform: rotate(360deg);
+}
+.icon2:hover{
+    transition: all 1s;
+    color: #ea3a5a;
+    transform: rotate(360deg);
+}
+.icon3:hover{
+    transition: all 1s;
+    color: #53b635;
+    transform: rotate(360deg);
+}
+
+
+.containerD {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.navBAR {
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 9999;
+    padding: 16px;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.closeBTN,
+.closeBTN:hover {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #666666;
+    margin-left: auto;
+}
+
+.navBAR ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 45px;
+}
+
+.navBAR ul li a {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #666666;
+}
+
+.navBAR ul li a:hover {
+    transition: all .8s;
+    color: #B10638;
+    transform: translateY(5px);
+}
+
+/* 選單滑入動畫 */
+.navBAR-in {
+    animation: navBAR-in-run 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes navBAR-in-run {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+/* 選單滑出動畫 */
+.navBAR-out {
+    animation: navBAR-out-run 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes navBAR-out-run {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+/*桌機*/
+@media (min-width:992px) {
+    /* 形象照按鈕 */
+    .headerD a {
+        margin: 32px 32px;
+        font-size: 32px;
+        font-weight: 600;
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        background-color: #FCF5F2;
+        color: #4b4747;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .headerD a:hover {
+        color: #af3a3a;
+    }
+
+    .containerD {
+        width: 90%;
+        margin: auto;
+    }
+
+    .navBAR {
+        width: 33%;
+        display: none;
+    }
+
+    .navBarSHOW {
+        display: block;
+    }
+    /* 右下角icon隱藏 */
+    .iconBarD {
+        display: none;
+    }
+
+    /* 商品圖-方塊酥排版 */
+    #environment .item:first-child {
+        width: 50%;
+        padding: 4px;
+    }
+
+    #environment .item:first-child~.item {
+        width: 25%;
+        padding: 4px;
+    }
+
+    #environment .item {
+        float: left;
+    }
+
+    .mapDIV {
+        width: 40%;
+        height: 400px;
+    }
+
+
+}
+
+@media (max-width:991px) {
+
+    /* 形象照按鈕 */
+    .headerD a {
+        font-weight: 600;
+        font-size: 32px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-35%);
+        background-color: #FCF5F2;
+        color: #4b4747;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    
+    .headerD a:active {
+        color: #af3a3a;
+        cursor: pointer;
+    }
+
+    .containerD {
+        width: 100%;
+        padding: 0 1em;
+        /* height: 72px; */
+        position: relative;
+    }
+
+    .navBAR {
+        width: 50%;
+        position: absolute;
+        left: 0;
+        top: 80px;
+        display: none;
+        /*隱藏選單*/
+        z-index: 9999;
+    }
+
+    .navBarSHOW {
+        display: block;
+    }
+
+    .iconBAR {
+        display: none;
+    }
+
+    .iconBarD {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 9998;
+    }
+
+    .iconBarD a {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        background-color: #BFAE99;
+        border: 2px solid #e8eaf0;
+        border-radius: 100%;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .iconBarD a:active {
+        background-color: #182E59;
+        transition: all .8s;
+    }
+
+
+    /* 商品圖-方塊酥排版 */
+    #environment .item {
+        width: 50%;
+        float: left;
+        padding: 4px;
+    }
+
+    .mapDIV {
+        margin-left: 48px;
+        width: 90%;
+        height: 300px;
+    }
+
+}
+
+@media (max-width:576px) {
+    .navBAR {
+        width: 100%;
+    }
+}
+
+
+
+/* 美甲作品----------------------- */
+#product,
+.environmentD {
+    width: 90%;
+    margin: 80px auto;
+}
+
+#product h2,
+.environmentD h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#product h2::after,
+.environmentD h2::after {
+    content: '';
+    width: 55%;
+    height: 8px;
+    background-color: #BFAE99;
+    margin-top: 16px;
+}
+
+/* 美甲作品圖 */
+.card-headD {
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*滑鼠移到圖片（指容器：card-headD）上，產生圖片放大*/
+.img-zoomD:hover {
+    transform: scale(1.1);
+    transition: all .8s .2s;
+}
+
+.card-bodyD h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: .5em;
+}
+
+/* 店內環境 */
+.environment-1 {background-image: url(../images/environment/environment-1.jpg);}
+.environment-2 {background-image: url(../images/environment/environment-2.jpg);}
+.environment-3 {background-image: url(../images/environment/environment-3.jpg);}
+.environment-4 {background-image: url(../images/environment/environment-4.jpg);}
+.environment-5 {background-image: url(../images/environment/environment-5.jpg);}
+
+.environmentBG-RWD {
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 滑鼠游標移到商品圖上方,背景變黑+顯示放大鏡icon */
+.item {
+    position: relative;
+}
+
+.item .itemBody a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #fff;
+    opacity: 0;
+}
+
+.item .itemBody a:hover,
+.item .itemBody a:active {
+    transition: all .8s;
+    opacity: 1;
+}
+
+#environment {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+/* 清除浮動float */
+.float-clearD {
+    clear: both;
+}
+
+
+/* 手風琴Accordion */
+.accordion-buttonD-title,
+.accordion-buttonD-title:not(.collapsed) {
+    color: #fff;
+    background-color: #BFAE99;
+}
+
+
+/* 隱藏箭頭圖示 */
+.accordion-buttonD-title::after,
+.accordion-buttonD-title:not(.collapsed)::after {
+    background-image: none;
+}
+
+
+/* 門市訊資 */
+.mapDIV {
+    background-image: url(/images/map.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 遮罩路徑 */
+.ClippyPath-rightPont {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+/* 濾鏡效果-灰階 */
+.colorGray {
+    filter: grayscale(80%);
+}
+
+.apBTN {
+    position: relative;
+    display: flex;
+    background-color: #BFAE99;
+    align-items: center;
+    justify-content: center;
+}
+
+.apBTN a {
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4b4747;
+    z-index: 9998;
+    border-radius: 20px;
+}
+
+.apBTN a:hover,.apBTN a:active {
+    color: #af3a3a;
+}
+
+/* 地圖 */
+#GoogleMap {
+    margin-top: 64px;
+}
+
+/* 頁尾 */
+footer {
+    background-color: #3f3f3f;
+    width: 100%;
+    height: 450px;
+    font-size: 14px;
+    color: #ececec;
+    padding: 2em;
+}
+
+footer a {
+    display: inline-block;
+    padding: 5px 0;
+    color: #ececec;
+}
+
+footer a:hover,
+footer a:active {
+    color: #df8816;
+}
+
+/* scroll-滑動式滾動-調整捲動到目的地的距離 */
+#News,
+#product,
+#environment,
+#question,
+#Store {
+    scroll-margin-top: 105px;
+}
+
+/* 滑鼠圖示 */
+.mouseIcon,
+.mouseIcon:hover,
+.mouseIcon:active {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #BFAE99;
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+    z-index: 9998;
+}
